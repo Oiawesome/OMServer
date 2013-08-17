@@ -488,7 +488,7 @@ var BattlePokemon = (function() {
 				}
 				continue;
 			}
-			if (this.disabledMoves[move.id] || !move.pp) {
+			if (this.disabledMoves[move.id] || !move.pp && (this.battle.gen !== 1 || !this.volatiles['partialtrappinglock'])) {
 				move.disabled = true;
 			} else if (!move.disabled) {
 				hasValidMove = true;
@@ -1095,6 +1095,9 @@ var BattleSide = (function() {
 		case 'doubles':
 			this.active = [null, null];
 			break;
+		case 'triples': case 'rotation':
+      			this.active = [null, null, null];
+      			break;
 		}
 
 		this.team = this.battle.getTeam(this, team);
@@ -2450,6 +2453,9 @@ var Battle = (function() {
 		case 'strugglerecoil':
 			this.add('-damage', target, target.getHealth, '[from] recoil');
 			break;
+		case 'confusion':
+			this.add('-damage', target, target.getHealth, '[from] confusion');
+			break;
 		default:
 			this.add('-damage', target, target.getHealth);
 			break;
@@ -2637,7 +2643,7 @@ var Battle = (function() {
 		//int(int(int(2*L/5+2)*A*P/D)/50);
 		var baseDamage = Math.floor(Math.floor(Math.floor(2*level/5+2) * basePower * attack/defense)/50) + 2;
 
-		// multi-target modifier (doubles only)
+		// multi-target modifier (doubles and triples only)
 		if (move.spreadHit) {
 			var spreadModifier = move.spreadModifier || 0.75;
 			this.debug('Spread modifier: ' + spreadModifier);
@@ -3039,6 +3045,21 @@ var Battle = (function() {
 			break;
 		case 'beforeTurn':
 			this.eachEvent('BeforeTurn');
+			// In triples, check that the Pokémon can touch eachother.
+			if (this.format === 'triples' && this.sides[0].length === 1 && this.sides[0].length === 1) {
+				for (var p in this.sides[0].active) {
+					if (!this.sides[0].active[p].fainted && p !== 1) {
+						this.switchIn(this.sides[0].active[p], 1);
+						break;
+					}
+				}
+				for (var p in this.sides[1].active) {
+					if (!this.sides[1].active[p].fainted && p !== 1) {
+						this.switchIn(this.sides[1].active[p], 1);
+						break;
+					}
+				}
+			}
 			break;
 		case 'residual':
 			this.add('');
