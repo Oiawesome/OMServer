@@ -41,6 +41,20 @@ exports.BattleFormats = {
 		ruleset: ['Six Moves', 'Standard', 'Team Preview'],
 		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
 	},
+	hardcoremeta: {
+		name: "Hard Core Metagame",
+		section: "Other Metagames",
+
+		effectType: 'Format',
+		rated: true,
+		challengeShow: true,
+		searchShow: true,
+		isTeambuilderFormat: true,
+		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'No Items'],
+		banlist: ['Uber', 'Soul Dew', 'Stealth Rock', 'Spikes', 'Toxic Spikes', 'Regenerator', 'Water Absorb', 'Poison Heal', 'Volt Absorb',
+		         'Speed Boost', 'Prankster', 'Substitute', 'Protect', 'Safeguard', 'Drizzle', 'Drought', 'Sand Stream', 'Snow Warning', 'Quiver Dance', 'Tailwind', 'Dragon Dance', 'Shift Gear', 'Tail Glow', 'Calm Mind', 'Bulk Up', 'Howl', 'Hone Claws', 'Swords Dance', 'Nasty Plot', 'Absorb', 'Mega Drain', 'Giga Drain', 'Drain Punch', 'Healing Wish', 'Wish', 'Lunar Dance', 'Healing Wish', 'Recover', 'Roost', 'Milk Drink', 'Softboiled'
+		 ]
+	},	
 	abilityexchange: {
 		name: "Ability Exchange",
 		section: "Other Metagames",
@@ -654,6 +668,16 @@ exports.BattleFormats = {
 		banlist: ['Unreleased', 'Illegal', 'Soul Dew']
 	},
 	
+	noitems: {
+        	effectType: 'Banlist',
+		validateSet: function(set, format) {
+			var template = this.getTemplate(set.species);
+			var problems = [];
+			set.item = '';
+			return problems;
+		}
+        },
+        
 	swalotclause: {
                 effectType: 'Rule',
                 onStart: function() {
