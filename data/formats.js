@@ -41,7 +41,7 @@ exports.BattleFormats = {
 		ruleset: ['Six Moves', 'Standard', 'Team Preview'],
 		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
 	},
-	hardcoremeta: {
+	hardcoremetagame: {
 		name: "Hard Core Metagame",
 		section: "Other Metagames",
 
@@ -159,7 +159,7 @@ exports.BattleFormats = {
 		ruleset: ['OU'],
 		banlist: ['Drizzle', 'Drought', 'Sand Stream', 'Snow Warning']
 	},
-	levelonemeta: {
+	'level1meta': {
 		name: "Level 1 Meta",
 		section: "Other Metagames",
 
