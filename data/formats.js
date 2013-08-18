@@ -159,6 +159,19 @@ exports.BattleFormats = {
 		ruleset: ['OU'],
 		banlist: ['Drizzle', 'Drought', 'Sand Stream', 'Snow Warning']
 	},
+	levelonemeta: {
+		name: "Level 1 Meta",
+		section: "Other Metagames",
+
+		effectType: 'Format',
+		maxLevel: 1,
+		rated: true,
+		challengeShow: true,
+		searchShow: true,
+		isTeambuilderFormat: true,
+		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
+	},	
 	colorchangemeta: {
 		name: "Color Change Meta",
 		section: "Other Metagames",
@@ -252,19 +265,6 @@ exports.BattleFormats = {
 		ruleset: ['Standard', 'Evasion Abilities Clause', 'Team Preview'],
 		banlist: ['Mewtwo', 'Lugia', 'Ho-Oh', 'Venusaur', 'Drizzle ++ Swift Swim']
 	},
-	joimmons: {
-		name: "Joimmons",
-		section: "Other Metagames",
-
-		mod: 'joimmons',
-		effectType: 'Format',
-		rated: true,
-		challengeShow: true,
-		searchShow: true,
-		isTeambuilderFormat: true,
-		ruleset: ['CAP Pokemon', 'Team Preview', 'Sleep Clause Mod', 'Species Clause', 'OHKO Clause', 'Moody Clause', 'Evasion Moves Clause', 'HP Percentage Mod'],
-		banlist: ['Uber', 'Soul Dew']
-	},
 	monotypeou: {
 		name: "Monotype (OU)",
 		section: "Other Metagames",
@@ -302,18 +302,6 @@ exports.BattleFormats = {
 		isTeambuilderFormat: true,
 		ruleset: ['OU', 'Offstat Pokemon'],
 		banlist: ['Stealth Rock', 'Spikes', 'Toxic Spikes', 'Kyurem-Black']
-	},
-	purehackmons: {
-		name: "Pure Hackmons",
-		section: "Other Metagames",
-
-		effectType: 'Format',
-		rated: true,
-		challengeShow: true,
-		searchShow: true,
-		isTeambuilderFormat: true,
-		ruleset: ['Pokemon', 'HP Percentage Mod'],
-		banlist: []
 	},
 	randombattle: {
 		name: "Random Battle",
