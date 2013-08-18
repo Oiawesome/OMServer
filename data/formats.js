@@ -289,16 +289,6 @@ exports.BattleFormats = {
 		ruleset: ['OU', 'Offstat Pokemon'],
 		banlist: ['Stealth Rock', 'Spikes', 'Toxic Spikes', 'Kyurem-Black']
 	},
-	pu: {
-		name: "PU",
-		section: "Other Metagames",
-
-		effectType: 'Format',
-		challengeShow: true,
-		isTeambuilderFormat: true,
-		ruleset: ['NU'],
-		banlist: ['Charizard', 'Wartortle', 'Kadabra', 'Golem', 'Haunter', 'Exeggutor', 'Weezing', 'Kangaskhan', 'Pinsir', 'Lapras', 'Ampharos', 'Misdreavus', 'Piloswine', 'Miltank', 'Ludicolo', 'Swellow', 'Gardevoir', 'Ninjask', 'Torkoal', 'Cacturne', 'Altaria', 'Armaldo', 'Gorebyss', 'Regirock', 'Regice', 'Bastiodon', 'Floatzel', 'Drifblim', 'Skuntank', 'Lickilicky', 'Probopass', 'Rotom-Fan', 'Samurott', 'Musharna', 'Gurdurr', 'Sawk', 'Carracosta', 'Garbodor', 'Sawsbuck', 'Alomomola', 'Golurk', 'Braviary', 'Electabuzz', 'Electrode', 'Liepard', 'Tangela', 'Eelektross', 'Ditto', 'Seismitoad', 'Zangoose', 'Roselia', 'Serperior', 'Metang', 'Tauros', 'Cradily', 'Primeape', 'Scolipede', 'Jynx', 'Basculin', 'Gigalith', 'Camerupt', 'Golbat']
-	},
 	purehackmons: {
 		name: "Pure Hackmons",
 		section: "Other Metagames",
@@ -378,23 +368,6 @@ exports.BattleFormats = {
 		banlist: ['Mewtwo', 'Lugia', 'Ho-Oh', 'Kyogre', 'Groudon', 'Rayquaza', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga', 'Palkia', 'Giratina', 'Giratina-Origin', 'Manaphy', 'Darkrai', 'Shaymin-Sky',
 			'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water',
 			'Tornadus-Therian', 'Thundurus', 'Reshiram', 'Zekrom', 'Landorus', 'Kyurem-White', 'Genesect'
-		]
-	},
-	stabmons: {
-		name: "STABmons",
-		section: "Other Metagames",
-
-                mod: 'stabmons',
-		effectType: 'Format',
-		rated: true,
-		challengeShow: true,
-		searchShow: true,
-		isTeambuilderFormat: true,
-		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
-		banlist: ['Drizzle ++ Swift Swim', 'Soul Dew',
-			'Mewtwo', 'Lugia', 'Ho-Oh', 'Blaziken', 'Kyogre', 'Groudon', 'Rayquaza', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Palkia', 'Giratina', 'Giratina-Origin', 'Manaphy', 'Shaymin-Sky',
-			'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water',
-			'Reshiram', 'Zekrom', 'Kyurem-White', 'Genesect'
 		]
 	},
 	statexchange: {
