@@ -41,6 +41,20 @@ exports.BattleFormats = {
 		ruleset: ['Six Moves', 'Standard', 'Team Preview'],
 		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
 	},
+	'duskmod2.0': {
+		name: "Dusk Mod 2.0",
+		section: "Other Metagames",
+
+                mod: 'duskmodtwo',
+		effectType: 'Format',
+		challengeDefault: true,
+		rated: true,
+		challengeShow: true,
+		searchShow: true,
+		isTeambuilderFormat: true,
+		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
+	},	
 	hardcoremetagame: {
 		name: "Hard Core Metagame",
 		section: "Other Metagames",
