@@ -272,6 +272,13 @@ var commands = exports.commands = {
                 return false;
         },
         
+        joim: function(target, room, user){
+		if(!this.canBroadcast()|| !user.can('broadcast')) return this.sendReply('/joim - Access Denied.');
+		if(!target) return this.sendReply('Insufficent Parameters.');
+		room.add('|c|joim|/me '+ target);
+		this.logModCommand(user.name + ' used /joim to say ' + target);
+	},
+	
 	/*********************************************************
 	 * Informational commands
 	 *********************************************************/
