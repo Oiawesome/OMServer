@@ -693,11 +693,11 @@ var commands = exports.commands = {
 
 	groups: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('+ <b>Voice</b> - They can use ! commands like !groups, and talk during moderated chat<br />' +
-			'% <b>Driver</b> - The above, and they can also mute and lock users and check for alts<br />' +
-			'@ <b>Moderator</b> - The above, and they can ban users<br />' +
-			'&amp; <b>Leader</b> - The above, and they can promote moderators and force ties<br />'+
-			'~ <b>Administrator</b> - They can do anything, like change what this message says');
+		this.sendReplyBox('+ <b>Voices</b> - They can use ! commands like !groups, and talk during moderated chat<br />' +
+			'% <b>Basic Programmer</b> - These are the people who help in the programming and implementing of a small amount of OMs, they are very helpful peopel and should be treated with respect. Their powers match the above, and they can also mute and lock users and check for alts<br />' +
+			'@ <b>Tier Leaders</b> - These are the people who have been REALLY helpful on the forums, making OMs, playing them alot and generally leading tiers. Their powers match the above, and they can ban users<br />' +
+			'&amp; <b>OtherMetas Moderators</b> - THese guys and gals moderate the entire OM forum, they are the people who watch over all the OMs, approve them, and generally are VERY elpful people, Their powers match the above, and they can promote moderators and force ties<br />'+
+			'~ <b>Administrators And Advance Programmers</b> - These people watch over the entire server AND make very large contribution to the programming of OMs, A good exmaple of this position (Since its hard to explain) would be a person like Joim. They can do anything, like change what this message say- Oh my god, this message HAS been changed!');
 	},
 
 	opensource: function(target, room, user) {
