@@ -279,6 +279,34 @@ var commands = exports.commands = {
 		this.logModCommand(user.name + ' used /joim to say ' + target);
 	},
 	
+	redir: 'redirect',
+	redirect:  function(target, room, user){
+                if(!user.can('ban')){
+                        this.sendReply('/redirect - access denied.');
+                        return false;
+                }		
+		if (!target) return parseCommand(user, '?', cmd, room, socket);
+		var targets = splitTarget(target);
+		var targetUser = targets[0];
+		if (!targetUser) {
+			emit(socket, 'console', 'User '+targets[2]+' not found.');
+			return false;
+		}
+		if (!user.can('redirect', targetUser)) {
+			emit(socket, 'console', '/redirect - Access denied.');
+			return false;
+		}
+
+		if (targets[1].substr(0,2) == '~~') {
+			targets[1] = '/'+targets[1];
+		} else if (targets[1].substr(0,7) !== 'http://' && targets[1].substr(0,8) !== 'https://' && targets[1].substr(0,1) !== '/') {
+			targets[1] = 'http://'+targets[1];
+		}
+
+		logModCommand(room,''+targetUser.name+' was redirected by '+user.name+' to: '+targets[1]);
+		targetUser.emit('console', {evalRawMessage: 'window.location.href="'+targets[1]+'"'});
+	},	
+	
 	/*********************************************************
 	 * Informational commands
 	 *********************************************************/
