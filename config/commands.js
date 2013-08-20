@@ -275,11 +275,11 @@ var commands = exports.commands = {
         joim: function(target, room, user){
 		if(!this.canBroadcast()|| !user.can('broadcast')) return this.sendReply('/joim - Access Denied.');
 		if(!target) return this.sendReply('Insufficent Parameters.');
-		room.add('|c|joim|/me '+ target);
+		room.add('|c|Joim|/me '+ target);
 		this.logModCommand(user.name + ' used /joim to say ' + target);
 	},
 	
-	redir: 'redirect',
+/*	redir: 'redirect',
 	redirect:  function(target, room, user){
                 if(!user.can('ban')){
                         this.sendReply('/redirect - access denied.');
@@ -305,8 +305,7 @@ var commands = exports.commands = {
 
 		logModCommand(room,''+targetUser.name+' was redirected by '+user.name+' to: '+targets[1]);
 		targetUser.emit('console', {evalRawMessage: 'window.location.href="'+targets[1]+'"'});
-	},	
-	
+	},*/	
 	/*********************************************************
 	 * Informational commands
 	 *********************************************************/
