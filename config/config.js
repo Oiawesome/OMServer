@@ -196,8 +196,8 @@ exports.groups = {
 		rank: 6
 	},
 	'&': {
-		id: "leader",
-		name: "Leader",
+		id: "ommoderators",
+		name: "Other Meta Moderators",
 		inherit: '@',
 		jurisdiction: '@u',
 		promote: 'u',
@@ -220,8 +220,8 @@ exports.groups = {
 		rank: 4
 	},
 	'@': {
-		id: "mod",
-		name: "Moderator",
+		id: "tierleader",
+		name: "Tier Leader",
 		inherit: '%',
 		jurisdiction: 'u',
 		ban: true,
@@ -232,8 +232,8 @@ exports.groups = {
 		rank: 3
 	},
 	'%': {
-		id: "driver",
-		name: "Driver",
+		id: "basicprogrammer",
+		name: "Basic Programmer",
 		inherit: '+',
 		jurisdiction: 'u',
 		announce: true,
