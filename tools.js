@@ -70,7 +70,7 @@ module.exports = (function () {
 			var baseData = moddedTools.base.data;
 			dataTypes.forEach(function(dataType) {
 				try {
-					var path = './data/mods/' + mod + '/' + dataFiles[dataType];
+					var path = './config/mods/' + mod + '/' + dataFiles[dataType];
 					if (fs.existsSync(path)) {
 						data[dataType] = require(path)['Battle' + dataType];
 					}
