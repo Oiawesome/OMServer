@@ -1043,7 +1043,7 @@ module.exports = (function () {
 
 	moddedTools.base = Tools.construct();
 	try {
-		var dirs = fs.readdirSync('./mods/');
+		var dirs = fs.readdirSync('./config/mods/');
 
 		dirs.forEach(function(dir) {
 			moddedTools[dir] = Tools.construct(dir);
